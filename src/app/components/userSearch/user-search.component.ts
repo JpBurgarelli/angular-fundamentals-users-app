@@ -1,19 +1,21 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-user-search',
+  selector: 'app-search-filter',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, FormsModule],
   templateUrl: './user-search.component.html',
-  styleUrl: './user-search.component.scss'
+  styleUrls: ['./user-search.component.scss'],
 })
-export class UserSearchComponent {
+
+export class SearchFilterComponent {
   searchQuery: string = '';
+  @Output() filterChange = new EventEmitter<string>();
 
-  @Output() searchQueryChanged: EventEmitter<string> = new EventEmitter();
-
-  onSearchChange(): void {
-    this.searchQueryChanged.emit(this.searchQuery);
+  onSearch(): void {
+    this.filterChange.emit(this.searchQuery);
   }
-
 }
+

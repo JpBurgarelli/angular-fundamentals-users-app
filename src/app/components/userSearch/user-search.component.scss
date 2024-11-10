@@ -1,14 +1,42 @@
+@import '../../../style/colors.scss';
+
 .search-section {
+  top: 0;
+  z-index: 10;
   padding: 1rem;
+  display: flex;
+  justify-content: center;
+  justify-self: start;
 
   input {
     display: block;
-    padding: 0.5rem;
+    padding: 0.75rem 1rem;
     width: 100%;
-    max-width: 20rem;
+    max-width: 25rem;
     margin: 0 auto;
-    border: 0.0625rem solid #ccc;
+    border: 0.0625rem solid $grey-light;
     border-radius: 0.5rem;
     outline: none;
+    background-color: $blue-dark;
+    color: $white;
+    font-size: 1rem;
+    box-shadow: 0 0.25rem 0.5rem rgba($black, 0.1);
+    transition: all 0.3s ease-in-out;
+
+    &::placeholder {
+      color: $grey-light;
+      font-size: 1rem;
+    }
+
+    &:focus {
+      border-color: $gold;
+      background-color: rgba($blue-light, 0.1);
+      transform: translateY(-0.125rem);
+    }
+
+    &:hover {
+      background-color: rgba($blue-light, 0.1);
+      border-color: $gold-light;
+    }
   }
 }

@@ -1,7 +1,5 @@
 <div class="page-container">
-  <div class="search-section">
-    <input type="text" placeholder="Pesquisar por nome..." [(ngModel)]="searchQuery" (input)="filterUsers()" />
-  </div>
+  <app-search-filter (filterChange)="onFilterChange($event)"></app-search-filter>
 
   <div class="content-section">
     <div class="card-list-container">

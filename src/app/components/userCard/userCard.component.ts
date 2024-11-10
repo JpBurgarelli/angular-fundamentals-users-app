@@ -7,18 +7,18 @@ import { UserService } from '../../services/user.service';
 import { IUser } from '../../models/user.model';
 import { UserProfileModalComponent } from '../userModal/user-profile-modal.component';
 import { FormsModule } from '@angular/forms';
+import { SearchFilterComponent } from '../userSearch/user-search.component';
 
 @Component({
   selector: 'user-card',
   standalone: true,
-  imports: [MatCardModule, MatButtonModule, CommonModule, FormsModule],
+  imports: [MatCardModule, MatButtonModule, CommonModule, FormsModule, SearchFilterComponent],
   templateUrl: './userCard.component.html',
   styleUrls: ['./userCard.component.scss'],
 })
 export class UserCard implements OnInit {
   users: IUser[] = [];
   filteredUsers: IUser[] = [];
-  searchQuery: string = '';
 
   constructor(private userService: UserService, private dialog: MatDialog) { }
 
@@ -34,9 +34,9 @@ export class UserCard implements OnInit {
     );
   }
 
-  filterUsers(): void {
+  onFilterChange(searchQuery: string): void {
     this.filteredUsers = this.users.filter((user) =>
-      user.name.toLowerCase().includes(this.searchQuery.toLowerCase())
+      user.name.toLowerCase().includes(searchQuery.toLowerCase())
     );
   }
 
