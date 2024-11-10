@@ -1,8 +1,13 @@
+<!-- userCard.component.html -->
 <div class="page-container">
   <app-search-filter (filterChange)="onFilterChange($event)"></app-search-filter>
-
   <div class="content-section">
-    <div class="card-list-container">
+    <div class="loading-container" *ngIf="isLoading">
+      <mat-spinner></mat-spinner>
+      <p class="loading-text">Carregando usuários...</p>
+    </div>
+
+    <div class="card-list-container" *ngIf="!isLoading">
       <mat-card class="user-card" *ngFor="let user of filteredUsers">
         <mat-card-header>
           <div class="header">
