@@ -57,6 +57,9 @@ Implementação de uma aplicação Angular que consome a API JSONPlaceholder par
 │   └── styles.scss
 ```
 
+# 🕐 tempo gasto
+- de 3 a 6h30m 
+
 ## 🚦 Instruções de Execução
 
 ```bash
