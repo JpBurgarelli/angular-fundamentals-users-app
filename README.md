@@ -1,27 +1,74 @@
-# AngularTest
+# 📝 Documentação - Angular Test
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
+## 🎯 Visão Geral
+Implementação de uma aplicação Angular que consome a API JSONPlaceholder para exibir e gerenciar uma lista de usuários com funcionalidades de busca em tempo real e visualização detalhada.
 
-## Development server
+## 🚀 Funcionalidades Implementadas
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Core Features
+- ✅ Listagem de usuários da API JSONPlaceholder
+- ✅ Visualização detalhada de usuários em modal
+- ✅ Busca em tempo real
+- ✅ Interface responsiva
+- ✅ Tratamento de erro simples
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Extras Implementados
+- ✅ Loading spinner durante carregamento (simulado pelo setTimeOut())
+- ✅ Paginação local entre home, usuários e localizacao
+- ✅ Feedback visual para erros de API
+- ✅ Compoenentes extras para melhorarar a UI
 
-## Build
+## 🛠 Tecnologias Utilizadas
+- Angular 
+- TypeScript
+- SCSS
+- Angular Material
+- RxJS
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 📦 Estrutura do Projeto
 
-## Running unit tests
+```bash
+├── src/
+│   ├── app/
+│   │   ├── components/
+│   │   │   ├── footer/
+│   │   │   ├── header/
+│   │   │   ├── userCard/
+│   │   │   ├── userModal/
+│   │   │   └── userSearch/
+│   │   ├── models/
+│   │   │   └── user.model.ts
+│   │   ├── pages/
+│   │   │   ├── home/
+│   │   │   ├── location/
+│   │   │   └── users/
+│   │   ├── services/
+│   │   ├── app.component.html
+│   │   ├── app.component.scss
+│   │   ├── app.component.spec.ts
+│   │   ├── app.component.ts
+│   │   ├── app.config.ts
+│   │   └── app.routes.ts
+│   ├── style/
+│   │   └── colors.scss
+│   ├── index.html
+│   ├── main.ts
+│   └── styles.scss
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 🚦 Instruções de Execução
 
-## Running end-to-end tests
+```bash
+# Instalação
+- Possuir o node e npm instalados
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- npm install
 
-## Further help
+- npm install -g @angular/cli
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+#inicar Projeto
+- ng serve
+```
+
+
