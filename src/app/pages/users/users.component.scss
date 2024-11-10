@@ -1,0 +1,23 @@
+@import "../../../style/colors.scss";
+
+.users-page-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $grey-dark;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    a {
+      h2 {
+        color: $gold;
+        text-decoration: underline;
+      }
+    }
+  }
+}
