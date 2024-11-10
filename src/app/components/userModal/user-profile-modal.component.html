@@ -1,0 +1,30 @@
+<h2 mat-dialog-title>Perfil do Usuário</h2>
+<mat-dialog-content>
+  <div class="user-profile">
+    <div class="profile-header">
+      <div class="user-icon">👤</div>
+      <div class="user-main-info">
+        <h3>{{ data.name }}</h3>
+        <p class="username">{{ data.username }}</p>
+      </div>
+    </div>
+
+    <div class="info-section">
+      <h4>Informações de Contato</h4>
+      <p><span>Email:</span> {{ data.email }}</p>
+      <p><span>Telefone:</span> {{ data.phone }}</p>
+      <p><span>Website:</span> {{ data.website }}</p>
+    </div>
+
+    <div class="info-section">
+      <h4>Endereço</h4>
+      <p><span>Rua:</span> {{ data.address.street }}</p>
+      <p><span>Complemento:</span> {{ data.address.suite }}</p>
+      <p><span>Cidade:</span> {{ data.address.city }}</p>
+      <p><span>CEP:</span> {{ data.address.zipcode }}</p>
+    </div>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Fechar</button>
+</mat-dialog-actions>

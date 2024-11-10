@@ -1,0 +1,73 @@
+@import '../../../style/colors.scss';
+
+.footer-container {
+  background-color: $blue-dark;
+  padding: 1rem;
+  border-top: 0.0625rem solid $blue;
+  position: sticky;
+  bottom: 0;
+  z-index: 100;
+  margin-top: 2rem;
+}
+
+.footer-content {
+  max-width: 60rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer-left {
+  color: $grey-light;
+  font-size: 0.875rem;
+
+  p {
+    margin: 0;
+  }
+}
+
+.footer-center {
+  .footer-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .footer-link {
+    color: $grey-light;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: $gold-light;
+    }
+  }
+}
+
+.footer-right {
+  color: $grey-light;
+  font-size: 0.875rem;
+
+  .developer-name {
+    color: $gold;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    text-align: center;
+  }
+}

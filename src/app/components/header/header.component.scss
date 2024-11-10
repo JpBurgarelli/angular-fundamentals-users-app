@@ -1,0 +1,94 @@
+@import '../../../style/colors.scss';
+
+
+
+.header-container {
+  background-color: $blue-dark;
+  padding: 1rem;
+  border-bottom: 0.0625rem solid $blue;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  max-width: 60rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+
+  .logo-icon {
+    color: $gold;
+    font-size: 1.5rem;
+  }
+
+  .logo-text {
+    color: $white;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 0;
+  }
+}
+
+.nav-section {
+  .nav-list {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-link {
+    color: $grey-light;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: $gold-light;
+    }
+  }
+}
+
+.user-section {
+  .user-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
+    border: 0.0625rem solid $gold;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    color: $gold;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background-color: $gold;
+      color: $blue-dark;
+    }
+
+    span {
+      font-size: 0.875rem;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nav-section {
+    display: none;
+  }
+
+  .user-section .user-button span {
+    display: block;
+  }
+}
