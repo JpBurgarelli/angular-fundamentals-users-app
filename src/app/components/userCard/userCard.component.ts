@@ -29,6 +29,7 @@ export class UserCard implements OnInit {
   users: IUser[] = [];
   filteredUsers: IUser[] = [];
   isLoading = false;
+  errorMessage = '';
 
   constructor(private userService: UserService, private dialog: MatDialog) { }
 
@@ -38,6 +39,7 @@ export class UserCard implements OnInit {
 
   loadUsers(): void {
     this.isLoading = true;
+    this.errorMessage = '';
 
     setTimeout(() => {
       this.userService.getUsers().subscribe({
@@ -46,8 +48,8 @@ export class UserCard implements OnInit {
           this.filteredUsers = data;
           this.isLoading = false;
         },
-        error: (error) => {
-          console.log('Erro na busca pelos usuários!', error);
+        error: () => {
+          this.errorMessage = 'Erro ao carregar usuários. Tente novamente.';
           this.isLoading = false;
         }
       });
