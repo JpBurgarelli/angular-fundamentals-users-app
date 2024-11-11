@@ -60,6 +60,14 @@ Implementação de uma aplicação Angular que consome a API JSONPlaceholder par
 # 🕐 tempo gasto
 - de 3 a 6h30m 
 
+# <img height="40" src="https://user-images.githubusercontent.com/84249945/219472556-367952b0-d430-495e-87b9-3f4611bdab21.png" /> Evidência Visual
+
+
+https://github.com/user-attachments/assets/bff2bc1e-badd-408c-bee2-b621c1011b46
+
+
+
+
 ## 🚦 Instruções de Execução
 
 ```bash
