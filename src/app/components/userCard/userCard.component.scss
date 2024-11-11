@@ -1,7 +1,7 @@
 @import "../../../style/colors.scss";
 
 .page-container {
-  margin-top: 400px;
+  margin-top: 25rem;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -20,7 +20,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 300px;
+  min-height: 18.75rem;
 
   .loading-text {
     margin-top: 1rem;
